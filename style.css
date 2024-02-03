@@ -1,0 +1,20 @@
+:root{
+    --bodyGradient: linear-gradient(rgb(55,55,55),  rgb(45,45,45) 20%,rgb(0,0,0));
+    --textColor: rgb(255,255,255)
+}
+
+body{
+    background-image: var(--bodyGradient);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:var(--textColor)
+}
+
+.central {
+    width: 100vh;
+    max-width: 100%;
+    margin: auto auto;
+    height: 100vh;
+    text-align: center;
+    text-shadow: 4px 4px 2px black;
+}
