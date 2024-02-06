@@ -3,10 +3,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content</title>
-    <link rel="icon" href="icon.jpg" type="image/jpg" />
+    <link rel="icon" href="../icon.jpg" type="image/jpg" />
     <link rel="stylesheet" href="../style.css">
 </head>
-<body style="overflow: hidden; margin: 0px 0px;">
+<body style="overflow: hidden; margin: 0px 0px">
     <div class="lleft">
         <div class="topfixed">
             <input id="search" placeholder="Search"> &ensp;
@@ -14,10 +14,13 @@
         </div>
     </div>
     <div class="rright">
-        <div class="LISU">
+        <div class="LISU" id="lisuuu">
+            <input id="name" placeholder="display name">
             <input id="email" placeholder="email">
             <input id="pass" placeholder="password" type="password">
-            <button id="su">New user: Sign up</button> <button id="lo">Existing user: Log in</button>
+            <button id="su">New user: Sign up</button> <button id="li">Existing user: Log in</button>
+            <p> Note: Username is required to sign up, but not required to log in.</p>
+            <p id="error" style="visibility: collapse; font-size: 0.88em;border-radius: 4px;padding: 0px 2px;"></p>
         </div>
         <p>Log in to upload your own content and like posts!</p><br>
         <label>Image URL: </label><input id="url" placeholder="https://images.cool"> <br>
@@ -25,6 +28,8 @@
         <label>Post Tags: &ensp;&nbsp;</label> <input id="t0" placeholder="pawg"> <input id="t1" placeholder="beta"> <input id="t2" placeholder="zone">
         <div id="preview"> Preiview</div> 
         <button id="Post" style="position: relative; bottom: 30px; left:15%;">Post</button>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="supa.js" type="module"></script>
     </div>
 </body>
 </html>
