@@ -156,7 +156,7 @@ DOM.urlIn.oninput = function(){
 }
 
 //loadImges
-let images = await supabase.from("Posts").select().order('column_name', { ascending: false })
+let images = await supabase.from("Posts").select().order('id', { ascending: false })
 images.data.forEach(img=>{
     console.log("IMAGE: " + img)
     DOM.lleft.insertAdjacentHTML("beforeend",`
