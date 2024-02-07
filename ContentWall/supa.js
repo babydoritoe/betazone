@@ -156,15 +156,18 @@ DOM.urlIn.oninput = function(){
 }
 
 //loadImges
-let images = await supabase.from("Posts").select().order('id', { ascending: false })
-images.data.forEach(img=>{
-    console.log("IMAGE: " + img)
-    DOM.lleft.insertAdjacentHTML("beforeend",`
-        <div class="cool">
-        <img src=${img.url}>
-        <div class="div2" style="background-image:url('${img.url}')"></div>
-        <h3 >${img.postInfo.title}</h3>
-        <p><i>By ${img.creator.name}</i></p>
-        </div>
-    `)
-})
+async function imgsss(){
+    let images = await supabase.from("Posts").select().order('id', { ascending: false })
+    images.data.forEach(img=>{
+        console.log("IMAGE: " + img)
+        DOM.lleft.insertAdjacentHTML("beforeend",`
+            <div class="cool">
+            <img src=${img.url}>
+            <div class="div2" style="background-image:url('${img.url}')"></div>
+            <h3 >${img.postInfo.title}</h3>
+            <p><i>By ${img.creator.name}</i></p>
+            </div>
+        `)
+    })
+}
+imgsss()
